@@ -11,3 +11,4 @@ echo "Hours until new year : " . round($diff / 3600) . "\n";
 echo "Minutes until new year : " . round($diff / 60) . "\n";
 echo "Seconds until new year : $diff\n";
 echo "Days:Hours:Minutes:Seconds " . round($diff / 86400) . ":" . date("H:i:s", $today[0]);
+?>

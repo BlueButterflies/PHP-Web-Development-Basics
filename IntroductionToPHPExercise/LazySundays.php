@@ -8,4 +8,4 @@ for($i = 1; $i <= $totalDays; $i++) {
     if(date("l", $date) == "Sunday") {
         echo date("jS m, Y", $date) . "\n";
     }
-}
+} ?>
