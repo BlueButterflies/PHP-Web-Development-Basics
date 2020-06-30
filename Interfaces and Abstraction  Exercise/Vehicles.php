@@ -44,13 +44,13 @@ interface IVehicles
 abstract class VehicleAbstract implements IVehicles
 {
     /** @var float */
-    protected $fuelQuantity;
+    private $fuelQuantity;
 
     /** @var float */
-    protected $fuelConsumption;
+    private $fuelConsumption;
 
     /** @var float */
-    protected $modifier;
+    private $modifier;
 
     /**
      * VehicleAbstract constructor.
@@ -64,54 +64,6 @@ abstract class VehicleAbstract implements IVehicles
         $this->modifier = $modifier;
         $this->fuelConsumption = $fuelConsumption + $modifier;
 
-    }
-
-    /**
-     * @return float
-     */
-    public function getFuelQuantity(): float
-    {
-        return $this->fuelQuantity;
-    }
-
-    /**
-     * @param float $fuelQuantity
-     */
-    public function setFuelQuantity(float $fuelQuantity): void
-    {
-        $this->fuelQuantity = $fuelQuantity;
-    }
-
-    /**
-     * @return float
-     */
-    public function getFuelConsumption(): float
-    {
-        return $this->fuelConsumption;
-    }
-
-    /**
-     * @param float $fuelConsumption
-     */
-    public function setFuelConsumption(float $fuelConsumption): void
-    {
-        $this->fuelConsumption = $fuelConsumption;
-    }
-
-    /**
-     * @return float
-     */
-    public function getModifier(): float
-    {
-        return $this->modifier;
-    }
-
-    /**
-     * @param float $modifier
-     */
-    public function setModifier(float $modifier): void
-    {
-        $this->modifier = $modifier;
     }
 
     public function drive(float $distance): string
@@ -161,6 +113,7 @@ class Truck extends VehicleAbstract
         parent::refuel($liters * self::REFUEL_MODIFIER);
     }
 }
+
 
 $vehicles = [];
 
